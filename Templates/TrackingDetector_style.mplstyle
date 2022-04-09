@@ -1,0 +1,24 @@
+# all text
+font.family:        serif
+font.size:          10
+
+# plots and scatter looks
+lines.linewidth:    1.5
+lines.markersize:   2
+scatter.marker:     o #see https://matplotlib.org/stable/api/markers_api.html
+
+# labels and ticks and legend
+axes.labelsize:     10
+axes.labelweight:   bold
+legend.fontsize:    8
+xtick.labelsize:    8
+ytick.labelsize:    8
+
+# looks of plot
+axes.spines.top:    False #removes upper box edge in plot figure
+axes.spines.right:  False #removes right box edge in plot figure
+
+# saving plots
+savefig.format:     pdf
+savefig.bbox:       tight
+savefig.transparent:True  #False is okay, but using transparant pdf plots ensures white background in any pdf file where the plot placed. 
