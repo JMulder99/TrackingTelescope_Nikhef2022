@@ -1,3 +1,10 @@
+# Add any file that should be ignored here...
+**/*.pdf
+**/*.png
+
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
