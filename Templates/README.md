@@ -6,4 +6,4 @@ Please use our matplotlib style file by placing the following in your code
 ```
 plt.style.use('~/Templates/TrackingDetector_style.mplstyle')
 ```
-For any command not specified in this file, matplotlib will use the standard style specified. [See this overview for the standards](https://github.com/matplotlib/matplotlib/blob/v3.3.4/matplotlibrc.template?utm_source=pocket_mylist)
+For any command not specified in this file, matplotlib will use the standard style specified. [See this overview for the standards](https://matplotlib.org/stable/tutorials/introductory/customizing.html)
