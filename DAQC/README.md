@@ -1,0 +1,3 @@
+In this subfolder, all code is collected to collect the data from the detector and do quality checks. 
+
+To be edited...
