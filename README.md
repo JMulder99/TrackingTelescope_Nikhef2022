@@ -20,18 +20,18 @@ The collaboration consists of the following teams:
 Open the **command prompt** and use 
 ```
 cd ~ # to go home
-mkrep <foldername> # name of you git repository/folder
+mkdir <foldername> # name of you git repository/folder
 cd <foldername>
 ```
 to create a new folder. Then, you are ready to **clone** this repository to your device. Use the following if you clone over HTTPS:
 ```
-git clone <github link>
+git clone https://github.com/JMulder99/TrackingTelescope_Nikhef2022
 ```
 or the following if you clone of SSH:
 ```
-git clone <github link>
+git clone git@github.com:JMulder99/TrackingTelescope_Nikhef2022.git
 ```
-Note that any git command is lead by `git`. See for example [this git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf). 
+Note that any git command is lead by `git`.
 
 Now use `ls -a` or a similar command to print all files (names) that you just cloned. Now you are ready for your first **commit**. Open this README file using your favorite text-editor. You can search online how to do this (and how to save and close the editor!). Then 
 ```
@@ -48,11 +48,18 @@ git push remote main  # git push <remote repository alias> <local branch>
 After that, anyone can use `git pull` to update their local repository with your update (and any changes done by others at that time). 
 
 # Good practices
-## Usefull command line prompts
+## Usefull git commands
+Checkout [this git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf) for most important git commands. You can also call 
+```
+git help
+```
+to print out an usefull list of most commands. You are encouraged to search any additional problem online. 
+
+## Usefull command line commands
 Checkout [this linux command line cheat sheet](https://cheatography.com/davechild/cheat-sheets/linux-command-line/). The "Directory Operations" with "ls options" are usefull to navigate in the command-line; "File Operations" are usefull to create, open etc files and "Nano Shortcuts" (the standard text editor) is usefull to edit `.txt` files and alike. 
 
 ## Plots
-You should save plots as pdf's as they are vector images (zoomable), but not upload them to git(hub). 
+You should save plots as pdf's as they are vector images (zoom-able), but not upload them to git(hub). 
 
 ## Branches
 If you are creating any new function/edition that might break your code, it is best to create a new **branch**.
