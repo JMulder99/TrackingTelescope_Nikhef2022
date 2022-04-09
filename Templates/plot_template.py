@@ -1,7 +1,7 @@
 # This file contains examples on how to create plots according to 1 agreed standard. 
 
 
-# scatter plot
+### SCATTER PLOT ###
 import matplotlib.pyplot as plt
 import random
 
@@ -20,7 +20,7 @@ ax.set_ylabel('distance [m]')
 plt.show()
 
 
-# errorbar plot
+### ERRORBAR PLOT ###
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -46,7 +46,7 @@ plt.legend()
 plt.show()
 
 
-# Subplots
+### SUBPLOTS ###
 from matplotlib.markers import MarkerStyle
 import numpy as np
 import matplotlib.pyplot as plt
