@@ -17,7 +17,7 @@ The collaboration consists of the following teams:
 
 ## Linking nikhef computer account to Github account over SSH
 To simplify the login process on the command line, a SSH connection can be set up with your GitHub account. This is a scary and bit complex process, but I am going to refer to [the Github website](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) where it is nicely explained. Check left navigation bar for the different steps. Generially, you need to
-1) Add Github email to git on nikhef account
+1) [Add Github email to git](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address) on nikhef account
 2) check for existing SSH keys (our nikhef accounts are fresh, so this can be skipped)
 3) Create the SSH keys on nikhef computer (passphrase can be skipped by pressing enter when asked)
 4) Copy the public key and add it to personal Github account
