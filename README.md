@@ -15,6 +15,18 @@ The collaboration consists of the following teams:
 
 ### Simulation and Track reconstruction
 
+## Linking nikhef computer account to Github account over SSH
+To simplify the login process on the command line, a SSH connection can be set up with your GitHub account. This is a scary and bit complex process, but I am going to refer to [the Github website](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) where it is nicely explained. Check left navigation bar for the different steps. Generially, you need to
+1) Add Github email to git on nikhef account
+2) check for existing SSH keys (our nikhef accounts are fresh, so this can be skipped)
+3) Create the SSH keys on nikhef computer (passphrase can be skipped by pressing enter when asked)
+4) Copy the public key and add it to personal Github account
+5) Test connection
+
+**Tip!** To copy text in and out of the les-center environment, you need to use the blue hovering arrow on the edge of the screen. You can past text in the clipboard section, then hover over text (selecting it with your cursor) to have it copied to the les-center environment. Note that anything that is selected in  les-center is automatically copied to your clipboard. Use right-press to paste in the command line. It may be easier to open the Github website on the internet browser inside les-center. 
+
+## Being added as collaborator
+I will add everyone with a Github account as a collaborator to our Github repository. 
 
 ## First commit
 Open the **command prompt** and use 
