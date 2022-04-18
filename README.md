@@ -5,13 +5,13 @@ The repository for the code from the 2022 Tracking Telescope Nikhef project. The
 The collaboration consists of the following teams:
 
 ### Lead developer 
-
+Jelmer Mulder #added this line from nikhef account
 
 ### Detector and hardware construction and testing
 
 
 ### Data acquisition and quality control
-
+Jelmer Mulder #added this line from nikhef account
 
 ### Simulation and Track reconstruction
 
