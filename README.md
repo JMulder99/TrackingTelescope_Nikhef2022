@@ -23,6 +23,8 @@ To simplify the login process on the command line, a SSH connection can be set u
 4) Copy the public key and add it to personal Github account
 5) Test connection
 
+Testing the connection may fail, you might see `Timeout: port 22 is not available`. Please take a look at (SSH cloning over HTTPS connection)[https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port]. Then, clone using the SSH link below.
+
 **Tip!** To copy text in and out of the les-center environment, you need to use the blue hovering arrow on the edge of the screen. You can past text in the clipboard section, then hover over text (selecting it with your cursor) to have it copied to the les-center environment. Note that anything that is selected in  les-center is automatically copied to your clipboard. Use right-press to paste in the command line. It may be easier to open the Github website on the internet browser inside les-center. 
 
 ## Being added as collaborator
@@ -32,8 +34,12 @@ I will add everyone with a Github account as a collaborator to our Github reposi
 Open the **command prompt** and use 
 ```
 cd ~ # to go home
+
+EDIT:
 mkdir <foldername> # name of you git repository/folder
 cd <foldername>
+# Instead of doing these lines above, you can directly clone the repository. 
+# It creates its own folder. Doing the above creates the cloned repository inside your subfolder. 
 ```
 to create a new folder. Then, you are ready to **clone** this repository to your device. Use the following if you clone over HTTPS:
 ```
