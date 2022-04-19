@@ -45,7 +45,7 @@ to create a new folder. Then, you are ready to **clone** this repository to your
 ```
 git clone https://github.com/JMulder99/TrackingTelescope_Nikhef2022
 ```
-or the following if you clone of SSH:
+or the following if you clone of SSH ((even if SSH not working directly))[https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port]
 ```
 git clone git@github.com:JMulder99/TrackingTelescope_Nikhef2022.git
 ```
@@ -59,9 +59,9 @@ git status # can be used to see the status of your commit
 
 git commit -m "<Short description of your edit>" #commit the file
 ```
-Now you have just "updated" your local **main branch** with your latest changes. To update the **remote** repository, you should **push** the commit to GitHub and ask for your change to be **merged** into the github main branch.
+Now you have just "updated" your local **main branch** with your latest changes. To update the **remote** repository (Use `git remote` to print out the name of the remote), you should **push** the commit to GitHub and ask for your change to be **merged** into the github main branch.
 ```
-git push remote main  # git push <remote repository alias> <local branch>
+git push origin main  # git push <remote repository alias> <local branch>
 ```
 After that, anyone can use `git pull` to update their local repository with your update (and any changes done by others at that time). 
 
