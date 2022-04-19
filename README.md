@@ -10,7 +10,7 @@ Jelmer Mulder #added this line from nikhef account
 ### Detector and hardware construction and testing
 Isis Hobus  #added this line from nikhef account
 Evi Nikoloudaki 
-\\Guoxi Zhu #added this line from nikhef account
+<br />Guoxi Zhu #added this line from nikhef account
 Dylano van Oijen #added this line from nikhef account
 ### Data acquisition and quality control
 Jelmer Mulder #added this line from nikhef account
