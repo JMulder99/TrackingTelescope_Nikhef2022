@@ -41,14 +41,15 @@ cd <foldername>
 # Instead of doing these lines above, you can directly clone the repository. 
 # It creates its own folder. Doing the above creates the cloned repository inside your subfolder. 
 ```
-to create a new folder. Then, you are ready to **clone** this repository to your device. Use the following if you clone over HTTPS:
-```
-git clone https://github.com/JMulder99/TrackingTelescope_Nikhef2022
-```
-or the following if you clone of SSH ((even if SSH not working directly))[https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port]
+to create a new folder. Then, you are ready to **clone** this repository to your device. Use the SSH method ((even if SSH not working directly and you used the config option))[https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port]
 ```
 git clone git@github.com:JMulder99/TrackingTelescope_Nikhef2022.git
 ```
+Otherwise, you can clone over HTTPS:
+```
+git clone https://github.com/JMulder99/TrackingTelescope_Nikhef2022
+```
+
 Note that any git command is lead by `git`.
 
 Now use `ls -a` or a similar command to print all files (names) that you just cloned. Now you are ready for your first **commit**. Open this README file using your favorite text-editor. You can search online how to do this (and how to save and close the editor!). Then 
