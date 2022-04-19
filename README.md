@@ -12,6 +12,7 @@ Isis Hobus  #added this line from nikhef account
 <br />Evi Nikoloudaki 
 <br />Guoxi Zhu #added this line from nikhef account
 <br />Dylano van Oijen #added this line from nikhef account
+<br />Viktoriia Tulaidan 
 ### Data acquisition and quality control
 Jelmer Mulder #added this line from nikhef account
 
