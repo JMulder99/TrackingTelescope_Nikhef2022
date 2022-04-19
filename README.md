@@ -12,11 +12,9 @@ Isis Hobus  #added this line from nikhef account
 <br />Evi Nikoloudaki 
 <br />Guoxi Zhu #added this line from nikhef account
 <br />Dylano van Oijen #added this line from nikhef account
-<<<<<<< HEAD
 <br />Viktoriia Tulaidan #added this line from nikhef account 
-=======
 <br />Svitlana Hoienko #added this line from nikhef account
->>>>>>> 4288fa79f6582fb11afdb9a8eac51fa92cc24b06
+
 ### Data acquisition and quality control
 Jelmer Mulder #added this line from nikhef account
 
