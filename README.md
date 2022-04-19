@@ -8,7 +8,7 @@ The collaboration consists of the following teams:
 Jelmer Mulder #added this line from nikhef account
 
 ### Detector and hardware construction and testing
-
+Isis Hobus
 
 ### Data acquisition and quality control
 Jelmer Mulder #added this line from nikhef account
