@@ -28,6 +28,17 @@ Evi Nikoloudaki
 <br />Dylano van Oijen #added this line from nikhef account
 <br />Aliwen Delgado #added this line from nikhef account
 
+## Update
+If you copied the 'dot' files in during the Canvas quiz, the .ssh/config file has be changed. You need to redo the ssh-over-https by adding the following lines:
+```
+Host github.com
+Hostname ssh.github.com
+Port 443
+User git
+```
+You should also comment out the following line in the .ssh/config file: change `IdentityFile ~/.ssh/nikhef_rsa` to `#IdentityFile ~/.ssh/nikhef_rsa` to use your public ssh keys that you coupled to your github account. 
+
+
 ## Linking nikhef computer account to Github account over SSH
 To simplify the login process on the command line, a SSH connection can be set up with your GitHub account. This is a scary and bit complex process, but I am going to refer to [the Github website](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) where it is nicely explained. Check left navigation bar for the different steps. Generially, you need to
 1) [Add Github email to git](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address) on nikhef account
