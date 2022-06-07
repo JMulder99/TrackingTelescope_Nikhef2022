@@ -6,6 +6,8 @@ The collaboration consists of the following teams:
 
 ### Lead developer 
 Jelmer Mulder #added this line from nikhef account
+<br />
+This line was added via the Nikhef PC
 
 ### Detector and hardware construction and testing
 Isis Hobus  #added this line from nikhef account
