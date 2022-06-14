@@ -8,7 +8,7 @@ The collaboration consists of the following teams:
 Jelmer Mulder #added this line from nikhef account
 <br />
 This line was added via the Nikhef PC
-
+This line was added from SSH connection from laptop Jelmer
 ### Detector and hardware construction and testing
 Isis Hobus  #added this line from nikhef account
 <br />Evi Nikoloudaki 
