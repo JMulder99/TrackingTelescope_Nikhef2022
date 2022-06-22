@@ -37,7 +37,7 @@ parser.add_argument('--strobelength','-l',type=int,help='strobe length (@ALPIDE 
 parser.add_argument('--ntrg'   ,'-n',type=suffixed_int,help='number of triggers per setting (default=100k)',default='100k')
 parser.add_argument('--foldername' ,'-o',help='name of the folder where the datafiles will be saved.')
 parser.add_argument('--path' ,help='Path to directory for data saving',default=".")
-parser.add_argument('--dtime',help='Total time to measure in seconds',default="10")
+parser.add_argument('--dtime',help='Total time to measure in seconds',default="20")
 args=parser.parse_args()
 
 #if not args.spacing: args.spacing=args.strobelength*2+10
