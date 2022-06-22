@@ -1,9 +1,8 @@
 # Add any file that should be ignored here...
 **/*.pdf
 **/*.png
-
-
-
+**/*.raw
+**/*.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -134,3 +133,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+fhrscan-20220622_125007.json fhrscan-20220622_145126.json fhrscan-20220622_151150.json
+board1.raw board2.raw fhrscan-20220622_145126.raw fhrscan-20220622_151150.raw
