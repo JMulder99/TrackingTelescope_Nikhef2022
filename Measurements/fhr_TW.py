@@ -143,8 +143,8 @@ print('Life time: %6.2f %%'%(dtalive/dtreal*100))
 filename= '%s/%s'%(args.path,args.output)
 
 if args.analyse:
-    os.system(f'/home/alpide/alpide-daq-software/analyses/hitmap.py {filename}')
-
+    os.system(f'/home/alpide-test/alpide-daq-software/analyses/hitmap.py {filename}')
+    
 
 
 
