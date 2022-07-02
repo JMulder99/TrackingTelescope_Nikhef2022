@@ -11,6 +11,7 @@
 
 # The ROOT module is needed, so make sure to source it before trying to use the code
 import ROOT
+import math
 
 
 def set_size(width, fraction=1, subplots=(1, 1)):
@@ -64,7 +65,7 @@ canvas_1 = ROOT.TCanvas("canvas_1", "Canvas title here", 1024,512)
 #		Below should be the path in the root file of the hist you want
 hist = infile.Get('EventLoaderEUDAQ2/ALPIDE_0/hitmap') 
 
-hist.SetStats(0) 					# removes the statistics box
+hist.SetStats(1) 					# removes the statistics box
 hist.SetLineWidth(2)					# width of the line
 hist.SetLineColor(1)					# color of the line
 hist.SetFillColor(0)					# color of area under the histogram	
@@ -86,7 +87,7 @@ canvas_2 = ROOT.TCanvas("canvas_2", "Canvas title here", 1024,512)
 #		Below should be the path in the root file of the hist you want
 hist = infile.Get('EventLoaderEUDAQ2/ALPIDE_1/hitmap') 
 
-hist.SetStats(0) 					# removes the statistics box
+hist.SetStats(1) 					# removes the statistics box
 hist.SetLineWidth(2)					# width of the line
 hist.SetLineColor(1)					# color of the line
 hist.SetFillColor(0)					# color of area under the histogram	
@@ -108,7 +109,7 @@ canvas_3 = ROOT.TCanvas("canvas_3", "Canvas title here", width, height)
 #		Below should be the path in the root file of the hist you want
 hist = infile.Get('Clustering4D/ALPIDE_0/clusterSize') 
 
-hist.SetStats(0) 					# removes the statistics box
+hist.SetStats(1) 					# removes the statistics box
 hist.SetLineWidth(2)					# width of the line
 hist.SetLineColor(1)					# color of the line
 hist.SetFillColor(0)					# color of area under the histogram	
@@ -130,7 +131,7 @@ canvas_4 = ROOT.TCanvas("canvas_4", "Canvas title here", width, height)
 #		Below should be the path in the root file of the hist you want
 hist = infile.Get('Clustering4D/ALPIDE_1/clusterSize') 
 
-hist.SetStats(0) 					# removes the statistics box
+hist.SetStats(1) 					# removes the statistics box
 hist.SetLineWidth(2)					# width of the line
 hist.SetLineColor(1)					# color of the line
 hist.SetFillColor(0)					# color of area under the histogram	
@@ -178,6 +179,10 @@ legend = ROOT.TLegend(0.9,0.9)
 hist = infile.Get('AnalysisParticleFlux/azimuth_flux') 
 hist2 = simfile.Get('AnalysisParticleFlux/azimuth_flux') 
 
+hist3 = infile.Get('AnalysisParticleFlux/azimuth')
+hist4 = simfile.Get('AnalysisParticleFlux/azimuth')
+scale = hist.GetBinContent(1)/hist3.GetBinContent(1)
+
 hist.SetStats(0) 					# removes the statistics box
 hist.SetLineWidth(2)					# width of the line
 hist.SetLineColor(3)					# color of the line
@@ -187,8 +192,11 @@ hist.SetMarkerColor(3)
 #hist.SetMarkerSize()					# color of area under the histogram	
 hist.SetTitle("Azimuth flux distribution")			# title of histogram
 hist.SetXTitle("#phi [#circ]")			# x label
-hist.SetYTitle("normalized flux / sr")	
-hist.Scale(1/hist.Integral(), "width");
+hist.SetYTitle("normalized flux / sr")
+for i in range(hist.GetNbinsX()):
+	error = math.sqrt(hist3.GetBinContent(i+1))*scale
+	hist.SetBinError(i+1,error)
+hist.Scale(1/hist.Integral(),"width")
 hist.SetTitleSize(0.07,axis="X")
 hist.SetTitleSize(0.07,axis="Y")
 legend.AddEntry(hist,"Data","l")
@@ -204,7 +212,11 @@ hist2.SetMarkerColor(2)
 hist2.SetTitle("Azimuth flux distribution")			# title of histogram
 hist2.SetXTitle("#phi [#circ]")			# x label
 hist2.SetYTitle("normalized flux / sr")
-hist2.Scale(1/hist2.Integral(), "width");
+#hist2.Sumw2()
+for i in range(hist2.GetNbinsX()):
+	error = math.sqrt(hist4.GetBinContent(i+1))*scale
+	hist2.SetBinError(i+1,error)
+hist2.Scale(1/hist2.Integral(),"width");
 hist2.SetTitleSize(0.07,axis="X")
 hist2.SetTitleSize(0.07,axis="Y")				# y label
 legend.AddEntry(hist2,"Simulation","l")
@@ -217,7 +229,7 @@ canvas_6.SetBottomMargin(0.15);
 hist.Draw()
 hist2.Draw("same")
 legend.Draw()
-canvas_6.SaveAs("azimuth_flux.pdf")
+canvas_6.SaveAs("azimuth_flux_change.pdf")
 	
 # --------------------------------
 canvas_7 = ROOT.TCanvas("canvas_7", "Canvas title here", width, height)
@@ -227,6 +239,10 @@ legend = ROOT.TLegend(0.9,0.9)
 hist = infile.Get('AnalysisParticleFlux/zenith_flux') 
 hist2 = simfile.Get('AnalysisParticleFlux/zenith_flux') 
 
+hist3 = infile.Get('AnalysisParticleFlux/zenith')
+hist4 = simfile.Get('AnalysisParticleFlux/zenith')
+scale2 = hist.GetBinContent(1)/hist3.GetBinContent(1)
+
 hist.SetStats(0) 					# removes the statistics box
 hist.SetLineWidth(2)					# width of the line
 hist.SetLineColor(3)					# color of the line
@@ -235,7 +251,10 @@ hist.SetMarkerStyle(21)
 hist.SetMarkerColor(3)					# color of area under the histogram	
 hist.SetTitle("Zenith flux distribution")		# title of histogram
 hist.SetXTitle("#theta [#circ]")			# x label
-hist.SetYTitle("normalized flux / sr")	
+hist.SetYTitle("normalized flux / sr")
+for i in range(hist.GetNbinsX()):
+	error = math.sqrt(hist3.GetBinContent(i+1))*scale2
+	hist.SetBinError(i+1,error)	
 hist.Scale(1/hist.Integral(), "width");
 hist.SetTitleSize(0.07,axis="X")
 hist.SetTitleSize(0.07,axis="Y")
@@ -251,6 +270,9 @@ hist2.SetMarkerColor(2)				# color of area under the histogram
 hist2.SetTitle("Zenith flux distribution")			# title of histogram
 hist2.SetXTitle("#phi [#circ]")			# x label
 hist2.SetYTitle("normalized flux / sr")
+for i in range(hist2.GetNbinsX()):
+	error = math.sqrt(hist4.GetBinContent(i+1))*scale2
+	hist2.SetBinError(i+1,error)
 hist2.Scale(1/hist2.Integral(), "width");	
 hist2.SetTitleSize(0.07,axis="X")
 hist2.SetTitleSize(0.07,axis="Y")		# y label
@@ -264,7 +286,7 @@ canvas_7.SetBottomMargin(0.15);
 hist.Draw()
 hist2.Draw("same")
 legend.Draw()
-canvas_7.SaveAs("zenith_flux.pdf")	
+canvas_7.SaveAs("zenith_flux_change.pdf")	
 
 # --------------------------------
 canvas_8 = ROOT.TCanvas("canvas_8", "Canvas title here", width, height)
