@@ -1,2 +1,2 @@
 # Design
-This subfolder contains files corresponding design of the experimental setup of the telescope. 
+This subfolder contains files corresponding design of the experimental setup of the telescope.  Within this folder, the newest version of the chip holder design in Fusion 360 is uploaded, together with the corresponding .stl file(s). Older versions of the chip holder are retired to the dedicated subfolder. 
